@@ -1,6 +1,6 @@
-# **MVP for Rivers Agile Movie List Coding Challenge**
+# **Rivers Agile Movie List Coding Challenge MVP**
 
-## **MVP and User Stories** —
+# **User Stories** —
 
 ### *Required:*
 

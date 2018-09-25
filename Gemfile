@@ -45,13 +45,12 @@ group :test do
   gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
+  gem "database_cleaner"
 end
 
 gem "suspenders", group: [:development, :test]
 
 gem 'high_voltage'
-gem 'bourbon', '~> 5.0'
-gem 'neat', '~> 2.1'
 gem 'spring-commands-rspec', group: :development
 gem 'rspec-rails', '~> 3.6', group: [:development, :test]
 gem 'shoulda-matchers', group: :test
@@ -68,7 +67,6 @@ gem 'bootstrap-sass'
 gem 'paperclip'
 gem 'font-awesome-rails'
 group :development do
-  gem 'mailcatcher', require: false
   gem 'html2haml', require: false
   gem 'guard-livereload', require: false
   gem 'brakeman', require: false
@@ -80,6 +78,4 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'capybara-email'
-  gem 'email_spec'
 end

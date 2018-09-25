@@ -6,9 +6,7 @@ abort("DATABASE_URL environment variable is set") if ENV["DATABASE_URL"]
 require "rspec/rails"
 require 'capybara/rails'
 require 'capybara/rspec'
-require 'capybara/email/rspec'
 require 'database_cleaner'
-require 'email_spec'
 require 'shoulda/matchers'
 require 'paperclip/matchers'
 

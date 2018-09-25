@@ -4,10 +4,10 @@
   },
   "env": {
     "APPLICATION_HOST": {
-      "required": true
+      "required": false
     },
     "EMAIL_RECIPIENTS": {
-      "required": true
+      "required": false
     },
     "HEROKU_APP_NAME": {
       "required": true
@@ -25,18 +25,5 @@
   "addons": [
     "heroku-postgresql"
   ],
-  "env": {
-    "SMTP_ADDRESS": {
-      "required": true
-    },
-    "SMTP_DOMAIN": {
-      "required": true
-    },
-    "SMTP_PASSWORD": {
-      "required": true
-    },
-    "SMTP_USERNAME": {
-      "required": true
-    }
   }
 }

@@ -227,9 +227,6 @@ GEM
     public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.5)
-    rack-canonical-host (0.2.3)
-      addressable (> 0, < 3)
-      rack (>= 1.0.0, < 3)
     rack-mini-profiler (1.0.0)
       rack (>= 1.2.0)
     rack-test (1.1.0)
@@ -397,7 +394,6 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma
-  rack-canonical-host
   rack-mini-profiler
   rack-timeout
   rails (~> 5.2.0)
@@ -422,4 +418,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.2
+   1.16.5

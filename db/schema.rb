@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_25_085114) do
+ActiveRecord::Schema.define(version: 2018_09_26_093457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,4 +30,32 @@ ActiveRecord::Schema.define(version: 2018_09_25_085114) do
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
   end
 
+  create_table "movie_lists", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_movie_lists_on_user_id"
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.string "name"
+    t.integer "rating"
+    t.integer "year_of_release"
+    t.string "genre"
+    t.bigint "movie_list_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_list_id"], name: "index_movies_on_movie_list_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "movie_lists", "users"
+  add_foreign_key "movies", "movie_lists"
 end

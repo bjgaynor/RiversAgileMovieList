@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @movie.name
+%p
+  %b Rating:
+  = @movie.rating
+%p
+  %b Year of release:
+  = @movie.year_of_release
+%p
+  %b Genre:
+  = @movie.genre
+%p
+  %b Movie list:
+  = @movie.movie_list
+
+= link_to 'Edit', edit_movie_path(@movie)
+\|
+= link_to 'Back', movies_path

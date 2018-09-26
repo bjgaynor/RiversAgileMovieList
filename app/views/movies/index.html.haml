@@ -1,0 +1,29 @@
+%h1 Listing movies
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Rating
+      %th Year of release
+      %th Genre
+      %th Movie list
+      %th
+      %th
+      %th
+
+  %tbody
+    - @movies.each do |movie|
+      %tr
+        %td= movie.name
+        %td= movie.rating
+        %td= movie.year_of_release
+        %td= movie.genre
+        %td= movie.movie_list
+        %td= link_to 'Show', movie
+        %td= link_to 'Edit', edit_movie_path(movie)
+        %td= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Movie', new_movie_path

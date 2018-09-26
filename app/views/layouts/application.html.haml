@@ -5,11 +5,22 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "NOODP", :name => "ROBOTS"}/
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
-    %title= title
+    %title= content_for?(:title) ? "Rivers Agile Movie List | #{yield(:title)}" : "Rivers Agile Movie List"
     = stylesheet_link_tag :application, media: "all"
     = csrf_meta_tags
+    = javascript_include_tag "application"
+    %nav.navbar.navbar-inverse.navbar-collapse.collapse.navbar-responsive-collapse
   %body{:class => body_class}
-    = render "flashes"
-    = yield
-    = render "javascript"
-    = render "css_overrides"
+
+  .flash_messages.text-center
+    = bootstrap_flash
+  .container
+    .row
+      .col-xs-8.col-xs-offset-2
+        - if content_for? :page_title
+          .page-header
+            %h1.clearfix
+              = yield :page_title
+            - if content_for?(:page_header_actions)
+              .fullscreen{style: "margin-top: -45px;"}= yield :page_header_actions
+        = yield

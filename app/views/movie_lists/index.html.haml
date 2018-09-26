@@ -14,8 +14,8 @@
     - @movie_lists.each do |movie_list|
       %tr
         %td= movie_list.name
-        # %td= movie_list.average_rating
-        # %td= movie_list.number_of_movies
+        %td=# movie_list.average_rating
+        %td=# movie_list.number_of_movies
         %td= link_to 'Show', movie_list
         %td= link_to 'Edit', edit_movie_list_path(movie_list)
         %td= link_to 'Destroy', movie_list, method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,12 +1,17 @@
-%p#notice= notice
-
 %p
   %b Name:
   = @movie_list.name
 %p
-  %b User:
-  = @movie_list.user
+  %b Average Rating:
+  =# @movie_list.average_rating
+%p
+  %b Number of Movies:
+  =# @movie_list.number_of_movies
+
+#loop to show the movies will go here
 
 = link_to 'Edit', edit_movie_list_path(@movie_list)
-\|
+
+%br
+
 = link_to 'Back', movie_lists_path

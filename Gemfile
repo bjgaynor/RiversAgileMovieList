@@ -13,7 +13,6 @@ gem "honeybadger"
 gem "jquery-rails"
 gem "pg", "~> 0.18"
 gem "puma"
-# gem "rack-canonical-host"
 gem "rails", "~> 5.2.0"
 gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
@@ -66,6 +65,9 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'paperclip'
 gem 'font-awesome-rails'
+gem 'jazz_fingers'
+gem 'seedbank'
+gem 'omdb-api'
 group :development do
   gem 'html2haml', require: false
   gem 'guard-livereload', require: false

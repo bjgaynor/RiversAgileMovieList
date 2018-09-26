@@ -4,7 +4,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "NOODP", :name => "ROBOTS"}/
-    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
     %title= content_for?(:title) ? "Rivers Agile Movie List | #{yield(:title)}" : "Rivers Agile Movie List"
     = stylesheet_link_tag :application, media: "all"
     = csrf_meta_tags
@@ -16,7 +16,7 @@
     = bootstrap_flash
   .container
     .row
-      .col-xs-8.col-xs-offset-2
+      .col-xs-8.col-xs-offset-3
         - if content_for? :page_title
           .page-header
             %h1.clearfix

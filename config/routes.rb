@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root to: redirect('/welcome')
+  root to: redirect('/my_lists')
 
-  get "/welcome" => "home#landing"
+  get "/my_lists" => "movie_lists#index"
 
   resources :users
   resources :movie_lists

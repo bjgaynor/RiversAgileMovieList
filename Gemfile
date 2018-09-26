@@ -66,6 +66,7 @@ gem 'bootstrap-sass'
 gem 'paperclip'
 gem 'font-awesome-rails'
 gem 'jazz_fingers'
+gem 'better_errors'
 gem 'seedbank'
 gem 'omdb-api'
 group :development do

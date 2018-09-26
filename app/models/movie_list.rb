@@ -1,13 +1,13 @@
 class MovieList < ApplicationRecord
-  belongs_to :user
   has_many :movies
+  belongs_to :user
 
   def number_of_movies
     movies.count
   end
 
   def average_rating
-    # *** map or collect movies ratings and average them
+    movies.average("rating")
   end
 
 end

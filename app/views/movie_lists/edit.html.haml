@@ -1,7 +1,10 @@
 %h1 Edit Movie List
 
 = render 'form'
+%br
+= link_to 'Destroy', @movie_list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"
 
+%br
 %br
 
 = link_to 'Show', @movie_list

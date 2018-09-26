@@ -1,25 +1,23 @@
-%h1 Movie List Dashboard
+%h1.text-center Movie List Dashboard
 
-%table
+%br
+= link_to 'Create Movie List', new_movie_list_path, class: "btn btn-success"
+%br
+%br
+%table.table.table-striped
   %thead
     %tr
       %th Name
       %th Average Rating
       %th Number of Movies
-      %th
-      %th
-      %th
 
   %tbody
     - @movie_lists.each do |movie_list|
       %tr
         %td= movie_list.name
-        %td=# movie_list.average_rating
-        %td=# movie_list.number_of_movies
-        %td= link_to 'Show', movie_list
-        %td= link_to 'Edit', edit_movie_list_path(movie_list)
-        %td= link_to 'Destroy', movie_list, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= movie_list.average_rating
+        %td= movie_list.number_of_movies
+      %tr
+        %td= link_to 'Show', movie_list, class: "btn btn-primary"
 
 %br
-
-= link_to 'Create Movie List', new_movie_list_path

@@ -7,7 +7,7 @@ class MovieList < ApplicationRecord
   end
 
   def average_rating
-    # map or collect movies ratings and average them
+    # *** map or collect movies ratings and average them
   end
 
 end
